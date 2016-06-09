@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="XFApp2.Views.HomePage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+	<StackLayout>
+		<Label HorizontalOptions="Center" Text="{Binding MainText}" VerticalOptions="Center" />
+		<Button Command="{Binding SendNotifCommand}" HorizontalOptions="Center" Text="Send Notif" VerticalOptions="Center" />
+	</StackLayout>
+</ContentPage>

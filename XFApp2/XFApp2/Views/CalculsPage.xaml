@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="XFApp2.Views.CalculsPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             Padding="30">
+
+	<StackLayout>
+
+		<!--  Region Numbers  -->
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<Entry Grid.Column="0" Keyboard="Numeric" Text="{Binding FirstNumber}" />
+			<Button Grid.Column="1" Command="{Binding SwapCommand}" Text="{Binding SwapButtonText}" />
+			<Entry Grid.Column="2" Keyboard="Numeric" Text="{Binding SecondNumber}" />
+		</Grid>
+		<!--  EndRegion  -->
+
+		<!--  Region Actions  -->
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<Button Grid.Row="0" Grid.Column="0" Command="{Binding AddCommand}" Text="{Binding AddButtonText}" />
+			<Button Grid.Row="0" Grid.Column="1" Command="{Binding SubCommand}" Text="{Binding SubButtonText}" />
+			<Button Grid.Row="1" Grid.Column="0" Command="{Binding MultCommand}" Text="{Binding MultButtonText}" />
+			<Button Grid.Row="1" Grid.Column="1" Command="{Binding DivCommand}" Text="{Binding DivButtonText}" />
+		</Grid>
+		<!--  EndRegion  -->
+
+		<Label FontSize="50" HorizontalTextAlignment="Center" Text="{Binding Result}" />
+
+	</StackLayout>
+
+</ContentPage>

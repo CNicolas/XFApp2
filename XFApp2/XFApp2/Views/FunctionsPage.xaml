@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="XFApp2.Views.FunctionsPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             Padding="30">
+
+	<StackLayout>
+		<Entry Keyboard="Numeric" Text="{Binding Number}" />
+
+		<!--  Region Actions  -->
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<Button Grid.Row="0" Grid.Column="0" Command="{Binding FactCommand}" Text="{Binding FactButtonText}" />
+			<Button Grid.Row="0" Grid.Column="1" Command="{Binding FibCommand}" Text="{Binding FibButtonText}" />
+			<Button Grid.Row="1" Grid.Column="0" Command="{Binding RootCommand}" Text="{Binding RootButtonText}" />
+			<Button Grid.Row="1" Grid.Column="1" Command="{Binding SquareCommand}" Text="{Binding SquareButtonText}" />
+			<Button Grid.Row="2" Grid.Column="0" Command="{Binding IsPrimeCommand}" Text="{Binding IsPrimeButtonText}" />
+		</Grid>
+		<!--  EndRegion  -->
+
+		<Label FontSize="50" HorizontalTextAlignment="Center" Text="{Binding Result}" />
+
+	</StackLayout>
+
+</ContentPage>
